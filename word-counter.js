@@ -2,8 +2,8 @@ const fs = require('fs');
 const names = './textfile/first-names.txt';
 const booklet = './textfile/oliver-twist.txt';
 const nameCounts = './textfile/name-counts.txt';
-let nameVar = fs.readFileSync(names, 'utf8').split(/\s+/gi);
-let bookvar = fs.readFileSync(booklet, 'utf8').split(/\s+/gi);
+let nameVar = fs.readFileSync(names, 'utf8').split(/\s+/);
+let bookvar = fs.readFileSync(booklet, 'utf8').split(/\s+/);
 
 let filterWords = filterArray(nameVar, bookvar)
 let namesMap = createWordMap(filterWords);
@@ -45,7 +45,7 @@ function sortByCount(namesMap) {
         return b.total - a.total;
     });
 
-    fs.writeFileSync(nameCounts,  JSON.stringify(finalWordsArray).split(/\n+/));
+    fs.writeFileSync(nameCounts,  JSON.stringify(finalWordsArray, null, 4));
     return finalWordsArray;
 }
 
