@@ -1,0 +1,17 @@
+{
+  "name": "wordcounter",
+  "version": "1.0.0",
+  "description": "Uses one file as a reference (names) to count the number of occurrences of words in another file (book)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "watch": "nodemon server"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "restful"
+  ],
+  "author": "Joram Antwi",
+  "license": "ISC"
+}
