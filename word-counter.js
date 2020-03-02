@@ -45,7 +45,7 @@ function sortByCount(namesMap) {
         return b.total - a.total;
     });
 
-    fs.writeFileSync(nameCounts,  JSON.stringify(finalWordsArray, null, 4));
+    fs.writeFileSync(nameCounts,  JSON.stringify(finalWordsArray, null, 2));
     return finalWordsArray;
 }
 
