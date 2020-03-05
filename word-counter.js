@@ -2,8 +2,8 @@ const fs = require('fs');
 const names = './textfile/first-names.txt';
 const booklet = './textfile/oliver-twist.txt';
 const nameCounts = './textfile/name-counts.txt';
-let nameVar = fs.readFileSync(names, 'utf8').split(/\s+/);
-let bookvar = fs.readFileSync(booklet, 'utf8').split(/\s+/);
+let nameVar = fs.readFileSync(names, 'utf8').split(/\W/);
+let bookvar = fs.readFileSync(booklet, 'utf8').split(/\W/);
 
 let filterWords = filterArray(nameVar, bookvar)
 let namesMap = createWordMap(filterWords);
